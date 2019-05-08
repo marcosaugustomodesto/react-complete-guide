@@ -9,7 +9,6 @@ class App extends Component {
       {name:'Manu', age:29},
       {name:'Stephanie', age:26}
     ],
-    otherState: 'some other value'
   }
 
   switchNameHandler = (newName) => {
@@ -21,7 +20,17 @@ class App extends Component {
         {name:'Manu', age:29},
         {name:'Stephanie', age:27}
       ]
-    });
+    })
+  }
+
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        {name: 'Max', age:28},
+        {name: event.target.value, age:29},
+        {name:'Stephanie', age:26}
+      ]
+    })
   }
   render() {
     return (
@@ -35,7 +44,9 @@ class App extends Component {
         <Person 
           name={this.state.persons[1].name} 
           age={this.state.persons[1].age}
-          click={this.switchNameHandler.bind(this, 'Max!')}/>
+          click={this.switchNameHandler.bind(this, 'Max!')}
+          changed={this.nameChangedHandler.bind(this, 'Max!')}
+          />
         <Person 
           name={this.state.persons[2].name} 
           age={this.state.persons[2].age}/>
