@@ -1,3 +1,9 @@
+This project was created with the follow command
+
+     npm install -g create-react-app
+     create-react-app react-complete-guide --script-version 1.1.5 (this was done to keep the compatibility with the course project)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
