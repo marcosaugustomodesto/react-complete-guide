@@ -22,7 +22,7 @@ class App extends Component {
 
     person.name = event.target.value;
 
-    const persons = {...this.state.persons};
+    const persons = [...this.state.persons];
 
     persons[personIndex] = person;
 
